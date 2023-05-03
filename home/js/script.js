@@ -2,7 +2,6 @@ const content = [];
 
 function createCards(e) {
     const target = document.querySelector('#content');
-
     const cards = content.map(item => {
         const tagWithSpaces = item.tag.replace(/-/g, ' ');
 

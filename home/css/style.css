@@ -1,0 +1,26 @@
+.banner {
+    background-image: url('/home/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .row {
+    z-index: 10;
+}
+
+.banner h1,
+.banner p {
+    color: var(--white);
+}
+
+.banner,
+.banner .row,
+.banner .overlay {
+    height: 90vh;
+}
+
+
+.banner .overlay {
+    background: var(--overlay);
+    opacity: 0.8;
+}

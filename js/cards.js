@@ -4,7 +4,7 @@ const content = [
         tag: "health",
         category: "podcast",
         img: "/posts/img/image1.jpg",
-        link: "",
+        link: "post-1/",
         date: "2023-05-05",
     },
     {
@@ -59,23 +59,24 @@ function createCards(e) {
 
         return `
             <div class="card ${content.date} ${content.category} ${content.tag}">
-                <a href="/posts/${content.link}">
-                    <img src="${content.img}" alt="${content.title}">
-                    <div class="card-content">
-                        <p class="tag">
-                            ${content.tag}
-                        </p>
-                        <h5>
-                            ${content.title}
-                        </h5>
-                        <a class="btn">
-                            Lees meer
-                        </a>
-                    </div>
-                </a>
+                <img src="${content.img}" alt="${content.title}">
+                <div class="card-content">
+                    <p class="tag">
+                        ${content.tag}
+                    </p>
+                    <h5>
+                        ${content.title}
+                    </h5>
+                    <a href="/posts/${content.link}" class="btn ghost">
+                        Lees meer
+                    </a>
+                </div>
+                <div class="overlay"></div>
             </div>
         `;
     }).join('');
 
     target.innerHTML = cards;
 };
+
+$(document).ready(createCards);

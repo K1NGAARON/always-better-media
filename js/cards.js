@@ -50,7 +50,7 @@ const content = [
 ];
 
 // Future reference
-posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+// posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 
 function createCards(e) {

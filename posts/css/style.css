@@ -67,6 +67,10 @@
     border-top-left-radius: var(--borderRadius);
 }
 
+.content .container .overlay {
+    background: var(--black);
+}
+
 .content .container img {
     width: 100%;
     object-fit: cover;

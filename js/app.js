@@ -6,13 +6,15 @@
 $(document).scroll(function () {
     const header = $('.header');
     const headerLogo = $('.header .logo');
-    const darkHeader = $('.header.dark');
+    const darkHeader = document.querySelector('.header.dark');
 
-    if (!darkHeader) {
+    if (darkHeader) {
         if ($(this).scrollTop() > header.height()) {
             header.addClass('active');
+            headerLogo.attr('src', "/assets/logo/always-better-black.png")
         } else {
             header.removeClass('active');
+            headerLogo.attr('src', "/assets/logo/always-better-black.png")
         }
     } else {
         if ($(this).scrollTop() > header.height()) {
@@ -20,7 +22,7 @@ $(document).scroll(function () {
             headerLogo.attr('src', "/assets/logo/always-better-black.png")
         } else {
             header.removeClass('active');
-            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+            headerLogo.attr('src', "/assets/logo/always-better-white.png")
         }
     }
 });

@@ -21,6 +21,10 @@
     color: var(--black);
 }
 
+.header.dark .container .nav {
+    color: var(--black);
+}
+
 .header.active .btn {
     color: var(--white);
     background-color: var(--primary);

@@ -4,7 +4,7 @@ const content = [
         tag: "health",
         category: "podcast",
         img: "/posts/img/image1.jpg",
-        link: "post-1/",
+        link: "dit-is-een-voorbeeld/",
         date: "2023-05-05",
     },
     {

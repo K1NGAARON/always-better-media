@@ -2,3 +2,84 @@
 .wrapper.cards .card:nth-child(7n-1) {
     flex: 1 0 40%;
 }
+
+.intro h1 {
+    font-size: 54px;
+    width: 65%;
+}
+
+.intro .row {
+    padding-top: 60px;
+}
+
+.intro .social-share {
+    display: flex;
+    gap: 10px;
+}
+
+.intro .social-share a {
+    font-size: 30px;
+    color: #D3D3D3;
+    transition: var(--transition);
+}
+
+.intro .social-share a:hover {
+    cursor: pointer;
+    color: var(--primary);
+    transition: var(--transition); 
+}
+
+.content .container {
+    position: relative;
+    width: 100%;
+}
+
+.content .container,
+.content .container img,
+.content .container .overlay {
+    height: 40vh;
+    border-top-right-radius: var(--borderRadius);
+    border-top-left-radius: var(--borderRadius);
+}
+
+.content .container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content .container .container-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.content .container .container-content h5,
+.content .container .container-content p {
+    color: var(--white);
+}
+
+.content .container .container-content h5 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.content .podcast-wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.content .podcast-wrapper iframe {
+    width: 100%;
+    height: 30vh;
+}
+
+.content .timestamp {
+    display: flex;
+    gap: 5px;
+}
+
+.content .mt-60 {
+    margin-top: 60px;
+}

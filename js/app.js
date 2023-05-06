@@ -6,14 +6,25 @@
 $(document).scroll(function () {
     const header = $('.header');
     const headerLogo = $('.header .logo');
+    const darkHeader = $('.header.dark');
 
-    if ($(this).scrollTop() > header.height()) {
-        header.addClass('active');
-        headerLogo.attr('src', "/assets/logo/always-better-black.png")
+    if (!darkHeader) {
+        if ($(this).scrollTop() > header.height()) {
+            header.addClass('active');
+        } else {
+            header.removeClass('active');
+        }
     } else {
-        header.removeClass('active');
-        headerLogo.attr('src', "/assets/logo/always-better-white.png")
+        if ($(this).scrollTop() > header.height()) {
+            header.addClass('active');
+            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+        } else {
+            header.removeClass('active');
+            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+        }
     }
+
+
 });
 
 function closeMenu() {

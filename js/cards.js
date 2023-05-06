@@ -45,7 +45,7 @@ const content = [
         category: "blog",
         img: "/posts/img/image6.jpg",
         link: "",
-        date: "2023-05-02",
+        date: "2023-05-06",
     },
     {
         title: "7. Apple Music Live returns for a brand-new season with Ed Sheeran",
@@ -97,18 +97,18 @@ const content = [
     },
 ];
 
-// Future reference
-// posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-// => create a sorting function
-
 const highlightedToShow = 6
 const archivedToShow = 8
+
+function sortPosts() {
+    content.sort((a, b) => new Date(b.date) - new Date(a.date));
+};
+
 
 function highlightedContent(e) {
     const target = document.querySelector('#content');
 
     const cards = content.slice(0, highlightedToShow).map(content => {
-        // const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
         return `
             <div class="card ${content.date} ${content.category} ${content.tag}">
@@ -137,7 +137,6 @@ function archiveContent(e) {
     const target = document.querySelector('#archive');
 
     const cards = content.slice(highlightedToShow, highlightedToShow + archivedToShow).map(content => {
-        // const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
         return `
             <div class="card-wrapper">
@@ -158,14 +157,14 @@ function archiveContent(e) {
             </div>
         `;
 
-
     }).join('');
 
     target.innerHTML = cards;
-}
+};
 
 
 $(document).ready(function() {
+    sortPosts();
     highlightedContent();
     archiveContent();
 });

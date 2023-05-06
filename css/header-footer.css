@@ -120,9 +120,48 @@
     margin: 30px auto;
 }
 
-.footer .legal {
-    font-size: 14px;
+.footer .row .col:nth-child(1) {
+    flex: 1 0 70%;
 }
+
+.footer .row .col:nth-child(2) {
+    flex: 1 0 25%;
+}
+
+.footer .row h5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer .row p,
+.footer .row a {
+    font-size: 16px;
+}
+
+.footer .socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .socials a {
+    font-size: 26px;
+}
+
+.footer .row.disclaimer {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.footer .row.disclaimer a {
+    color: var(--white);
+}
+
+.footer .row.disclaimer a,
+.footer .row.disclaimer p {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
 
 @media (max-width: 560px) {
     .header .row {

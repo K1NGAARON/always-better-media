@@ -14,6 +14,7 @@
 .wrapper.cards .card:nth-child(1),
 .wrapper.cards .card:nth-child(7n-1) {
     flex: 1 0 100%;
+    max-height: 50vh;
 }
 
 .wrapper.cards .card,
@@ -51,4 +52,55 @@
 .wrapper.cards .card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+/* ARCHIVE CARDS */
+.archive .wrapper.cards {
+    margin: 40px auto;
+    gap: 60px;
+}
+
+.archive h2 {
+    align-self: flex-start;
+}
+
+.wrapper.cards .card-wrapper {
+    flex: 0 1 40%;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+
+
+.wrapper.cards .card.archive-card {
+    flex: 0 1 50%;
+    flex-flow: row wrap;
+    position: unset;
+}
+
+.wrapper.cards .card-wrapper img {
+    width: 20%;
+    flex: 1 0 20%;
+    border-radius: var(--borderRadius);
+    object-fit: cover;
+}
+
+
+.wrapper.cards .card.archive-card .card-content {
+    position: unset;
+}
+
+.wrapper.cards .card.archive-card .card-content h5, 
+.wrapper.cards .card.archive-card .card-content p {
+    color: var(--black);
+}
+
+.wrapper.cards .card.archive-card .card-content h5 {
+    font-size: 22px;
+}
+
+.wrapper.cards .card.archive-card .card-content .btn {
+    font-size: 14px;
 }

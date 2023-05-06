@@ -113,7 +113,10 @@ function highlightedContent(e) {
 
             return `
                 <div class="card ${content.date} ${content.category} ${content.tag}">
-                    <img src="${content.img}" alt="${content.title}">
+                    <div class="card-image">
+                        <img src="${content.img}" alt="${content.title}">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="card-content">
                         <p class="tag">
                             ${content.tag}
@@ -121,11 +124,10 @@ function highlightedContent(e) {
                         <h5>
                             ${content.title}
                         </h5>
-                        <a href="/posts/${content.link}" class="btn ghost">
-                            Lees meer
+                        <a href="/posts/${content.link}" class="btn ghost no-border">
+                            Lees meer <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
-                    <div class="overlay"></div>
                 </div>
             `;
         }).join('');
@@ -152,10 +154,10 @@ function archiveContent(e) {
                             <h5>
                                 ${content.title}
                             </h5>
-                            <a href="/posts/${content.link}" class="btn ghost">
-                                Lees meer
-                            </a>
                         </div>
+                        <a href="/posts/${content.link}" class="btn ghost">
+                            Lees meer
+                        </a>
                     </div>
                 </div>
             `;

@@ -1,5 +1,5 @@
 .wrapper.cards {
-    width: 100%;
+    width: 80%;
     flex-flow: row wrap;
     gap: 40px;
 }
@@ -11,10 +11,11 @@
     position: relative;
 }
 
-.wrapper.cards .card:nth-child(1),
-.wrapper.cards .card:nth-child(7n-1) {
-    flex: 1 0 100%;
-    max-height: 50vh;
+.wrapper.cards .card .btn.no-border {
+    font-size: 14px;
+    border: none;
+    padding: unset;
+    /* margin-top: auto; */
 }
 
 .wrapper.cards .card,
@@ -26,21 +27,26 @@
 .wrapper.cards .card .overlay {
     background-color: var(--black);
     opacity: 0.7;
+    position: absolute;
+}
+
+.wrapper.cards .card .card-image {
+    flex: 1 0 60%;
+    display: flex;
+    position: relative;
 }
 
 .wrapper.cards .card .card-content {
     display: flex;
     flex-direction: column;
-
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
+    background-color: var(--white);
+    padding-top: 20px;
     z-index: 10;
 }
 
 .wrapper.cards .card .card-content h5,
 .wrapper.cards .card .card-content p {
-    color: var(--white);
+    color: var(--black);
 }
 
 .wrapper.cards .card .card-content h5 {
@@ -55,15 +61,37 @@
     object-fit: cover;
 }
 
+
+/* LARGE CARDS */
+.wrapper.cards .card:nth-child(1),
+.wrapper.cards .card:nth-child(7n-1) {
+    flex: 1 0 100%;
+    flex-flow: row wrap;
+    gap: 40px;
+    max-height: 50vh;
+}
+
+.wrapper.cards .card:nth-child(1) .card-image,
+.wrapper.cards .card:nth-child(7n-1) .card-image {
+    flex: 1 0 60%;
+    display: flex;
+    position: relative;
+    height: 30vh;
+}
+
+.wrapper.cards .card:nth-child(1) .card-content,
+.wrapper.cards .card:nth-child(7n-1) .card-content {
+    flex: 1 0 30%;
+}
+
 /* ARCHIVE CARDS */
 .archive .wrapper.cards {
+    width: 100%;
     margin: 40px auto;
+    justify-content: center;
     gap: 60px;
 }
 
-.archive h2 {
-    align-self: flex-start;
-}
 
 .wrapper.cards .card-wrapper {
     flex: 0 1 40%;
@@ -78,6 +106,7 @@
     flex: 0 1 50%;
     flex-flow: row wrap;
     position: unset;
+    background-color: var(--wite);
 }
 
 .wrapper.cards .card-wrapper img {
@@ -90,6 +119,7 @@
 
 .wrapper.cards .card.archive-card .card-content {
     position: unset;
+    background-color: transparent;
 }
 
 .wrapper.cards .card.archive-card .card-content h5, 
@@ -103,4 +133,24 @@
 
 .wrapper.cards .card.archive-card .card-content .btn {
     font-size: 14px;
+    margin-top: auto;
+}
+
+/* LARGE CARDS ON ARCHIVE */
+.wrapper.cards .card.all-cards:nth-child(1),
+.wrapper.cards .card.all-cards:nth-child(7n-1) {
+    flex: 1 0 40%;
+    flex-flow: column;
+    gap: unset;
+    max-height: unset;
+}
+
+.wrapper.cards .card.all-cards:nth-child(1) .card-image,
+.wrapper.cards .card.all-cards:nth-child(7n-1) .card-image {
+    flex: unset;
+}
+
+.wrapper.cards .card.all-cards:nth-child(1) .card-content,
+.wrapper.cards .card.all-cards:nth-child(7n-1) .card-content {
+    flex: unset;
 }

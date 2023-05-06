@@ -5,8 +5,11 @@ function createAllContent(e) {
         const cards = content.map(content => {
 
             return `
-                <div class="card ${content.date} ${content.category} ${content.tag}">
-                    <img src="${content.img}" alt="${content.title}">
+                <div class="card all-cards ${content.date} ${content.category} ${content.tag}">
+                    <div class="card-image">
+                        <img src="${content.img}" alt="${content.title}">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="card-content">
                         <p class="tag">
                             ${content.tag}
@@ -14,11 +17,10 @@ function createAllContent(e) {
                         <h5>
                             ${content.title}
                         </h5>
-                        <a href="/posts/${content.link}" class="btn ghost">
-                            Lees meer
-                        </a>
                     </div>
-                    <div class="overlay"></div>
+                    <a href="/posts/${content.link}" class="btn ghost no-border">
+                        Lees meer <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
             `;
         }).join('');
@@ -34,8 +36,11 @@ function highlightedContent(e) {
         const cards = content.slice(0, 4).map(content => {
 
             return `
-                <div class="card ${content.date} ${content.category} ${content.tag}">
-                    <img src="${content.img}" alt="${content.title}">
+                <div class="card related-card ${content.date} ${content.category} ${content.tag}">
+                    <div class="card-image">
+                        <img src="${content.img}" alt="${content.title}">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="card-content">
                         <p class="tag">
                             ${content.tag}
@@ -43,11 +48,10 @@ function highlightedContent(e) {
                         <h5>
                             ${content.title}
                         </h5>
-                        <a href="/posts/${content.link}" class="btn ghost">
-                            Lees meer
-                        </a>
                     </div>
-                    <div class="overlay"></div>
+                    <a href="/posts/${content.link}" class="btn ghost no-border">
+                        Lees meer <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
             `;
         }).join('');

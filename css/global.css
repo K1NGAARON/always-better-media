@@ -162,12 +162,13 @@ img {
     border: 1px solid var(--primary);
     border-radius: 3px;
     padding: 10px 15px;
+    transform: translateX(0px);
     transition: var(--transition); 
 }
 
 .btn:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    transform: translateX(10px);
     transition: var(--transition);
 }
 

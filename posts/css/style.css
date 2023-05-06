@@ -34,6 +34,10 @@
     gap: 0;
 }
 
+.wrapper.cards .related-card .card-image {
+    overflow: unset;
+}
+
 .wrapper.cards .card.related-card .card-image {
     flex: 0 1;
 }

@@ -23,8 +23,6 @@ $(document).scroll(function () {
             headerLogo.attr('src', "/assets/logo/always-better-black.png")
         }
     }
-
-
 });
 
 function closeMenu() {

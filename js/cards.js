@@ -108,40 +108,12 @@ function sortPosts() {
 function highlightedContent(e) {
     const target = document.querySelector('#content');
 
-    const cards = content.slice(0, highlightedToShow).map(content => {
+    if (target) {
+        const cards = content.slice(0, highlightedToShow).map(content => {
 
-        return `
-            <div class="card ${content.date} ${content.category} ${content.tag}">
-                <img src="${content.img}" alt="${content.title}">
-                <div class="card-content">
-                    <p class="tag">
-                        ${content.tag}
-                    </p>
-                    <h5>
-                        ${content.title}
-                    </h5>
-                    <a href="/posts/${content.link}" class="btn ghost">
-                        Lees meer
-                    </a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-        `;
-    }).join('');
-
-    target.innerHTML = cards;
-};
-
-
-function archiveContent(e) {
-    const target = document.querySelector('#archive');
-
-    const cards = content.slice(highlightedToShow, highlightedToShow + archivedToShow).map(content => {
-
-        return `
-            <div class="card-wrapper">
-                <img src="${content.img}" alt="${content.title}">
-                <div class="card archive-card ${content.date} ${content.category} ${content.tag}">
+            return `
+                <div class="card ${content.date} ${content.category} ${content.tag}">
+                    <img src="${content.img}" alt="${content.title}">
                     <div class="card-content">
                         <p class="tag">
                             ${content.tag}
@@ -153,13 +125,45 @@ function archiveContent(e) {
                             Lees meer
                         </a>
                     </div>
+                    <div class="overlay"></div>
                 </div>
-            </div>
-        `;
+            `;
+        }).join('');
+    
+        target.innerHTML = cards;
+    }
+};
 
-    }).join('');
 
-    target.innerHTML = cards;
+function archiveContent(e) {
+    const target = document.querySelector('#archive');
+
+    if (target) {
+        const cards = content.slice(highlightedToShow, highlightedToShow + archivedToShow).map(content => {
+
+            return `
+                <div class="card-wrapper">
+                    <img src="${content.img}" alt="${content.title}">
+                    <div class="card archive-card ${content.date} ${content.category} ${content.tag}">
+                        <div class="card-content">
+                            <p class="tag">
+                                ${content.tag}
+                            </p>
+                            <h5>
+                                ${content.title}
+                            </h5>
+                            <a href="/posts/${content.link}" class="btn ghost">
+                                Lees meer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+    
+        }).join('');
+    
+        target.innerHTML = cards;
+    }
 };
 
 

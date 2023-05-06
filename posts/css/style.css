@@ -1,0 +1,4 @@
+.wrapper.cards .card:nth-child(1),
+.wrapper.cards .card:nth-child(7n-1) {
+    flex: 1 0 40%;
+}

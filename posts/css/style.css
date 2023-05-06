@@ -3,6 +3,31 @@
     flex: 1 0 40%;
 }
 
+.related.section {
+    background-color: #D3D3D3;
+}
+
+.wrapper.cards.related-cards .card {
+    flex: 1 0;
+}
+
+.wrapper.cards.related-cards .card .card-content {
+    bottom: 20px;
+    left: 20px;
+}
+
+.wrapper.cards.related-cards .card .card-content .tag {
+    font-size: 14px;
+}
+
+.wrapper.cards.related-cards .card .card-content h5 {
+    font-size: 18px;
+}
+
+.wrapper.cards.related-cards .card .card-content .btn {
+    font-size: 12px;
+}
+
 .intro h1 {
     font-size: 54px;
     width: 65%;

@@ -11,13 +11,14 @@
     font-weight: 700;
     padding: 10px;
     border-radius: var(--borderRadius);
-    border: 1px solid var(--primary);
-    color: var(--primary);
+    border: 1px solid var(--black);
+    color: var(--black);
     transition: var(--transition);
 }
 
 .filters.section select:focus-visible {
     outline: none;
+    color: var(--primary);
     border: 2px solid var(--primary);
     transition: var(--transition);
 }

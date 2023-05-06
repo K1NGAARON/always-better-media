@@ -1,15 +1,18 @@
-function shuffleArray(array) {
-    array.sort(() => Math.random() - 0.5);
-};
+// function shuffleArray(array) {
+//     array.sort(() => Math.random() - 0.5);
+// };
 
 // STICKY LARGE MENU
 $(document).scroll(function () {
     const header = $('.header');
+    const headerLogo = $('.header .logo');
 
     if ($(this).scrollTop() > header.height()) {
         header.addClass('active');
+        headerLogo.attr('src', "/assets/logo/always-better-black.png")
     } else {
         header.removeClass('active');
+        headerLogo.attr('src', "/assets/logo/always-better-white.png")
     }
 });
 
@@ -35,7 +38,6 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').removeClass('fa-plus');
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
-
 
 
 $('.small-menu-content .nav').click(closeMenu);

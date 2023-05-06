@@ -1,3 +1,27 @@
+.filters.section {
+    background-color: var(--light-grey);
+}
+
+.filters.section .wrapper {
+    gap: 40px;
+}
+
+.filters.section select {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.filters.section select:focus-visible {
+    outline: none;
+    border: 2px solid var(--primary);
+    transition: var(--transition);
+}
+
 .wrapper.cards .card:nth-child(1),
 .wrapper.cards .card:nth-child(7n-1) {
     flex: 1 0 40%;

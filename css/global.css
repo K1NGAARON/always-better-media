@@ -59,6 +59,10 @@ li {
     font-size: 20px;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .banner.section .row {
     padding-top: 40px;
 }

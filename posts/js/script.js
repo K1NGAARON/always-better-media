@@ -18,10 +18,10 @@ function createAllContent(e) {
                         <h5>
                             ${content.title}
                         </h5>
-                    </div>
-                    <a href="/posts/${content.link}" class="btn ghost no-border">
+                        <a href="/posts/${content.link}" class="btn ghost no-border">
                         Lees meer <i class="fa-solid fa-chevron-right"></i>
                     </a>
+                    </div>
                 </div>
             `;
         }).join('');

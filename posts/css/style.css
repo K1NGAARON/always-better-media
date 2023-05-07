@@ -86,8 +86,9 @@
     font-size: 18px;
 }
 
-.wrapper.cards.related-cards .card .card-content .btn {
+.wrapper.cards.related-cards .card .btn {
     font-size: 12px;
+    margin-top: auto;
 }
 
 .intro h1 {

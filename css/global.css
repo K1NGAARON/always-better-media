@@ -33,15 +33,15 @@ h3 {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 54px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 h4 {
@@ -90,6 +90,10 @@ img {
 
 .hidden {
     display: none;
+}
+
+.section.content {
+    background-color: var(--light-grey);
 }
 
 .border-radius {

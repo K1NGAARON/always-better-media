@@ -10,13 +10,14 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
 }
 
 .wrapper.cards .card .btn.no-border {
     font-size: 14px;
     border: none;
     padding: unset;
-    /* margin-top: auto; */
 }
 
 .wrapper.cards .card img,
@@ -40,8 +41,10 @@
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    padding-top: 20px;
+    padding: 20px;
     z-index: 10;
+    border-bottom-right-radius: var(--borderRadius);
+    border-bottom-left-radius: var(--borderRadius);
 }
 
 .wrapper.cards .card .card-content h5,
@@ -50,7 +53,7 @@
 }
 
 .wrapper.cards .card .card-content h5 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -93,6 +96,7 @@
 .wrapper.cards .card:nth-child(1) .card-content,
 .wrapper.cards .card:nth-child(7n-1) .card-content {
     flex: 1 0 30%;
+    border-top-right-radius: var(--borderRadius);
 }
 
 /* ARCHIVE CARDS */

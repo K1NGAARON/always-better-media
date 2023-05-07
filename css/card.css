@@ -4,6 +4,8 @@
     gap: 40px;
 }
 
+
+
 .wrapper.cards .card {
     flex: 1 0 40%;
     display: flex;

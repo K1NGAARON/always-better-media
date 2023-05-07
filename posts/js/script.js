@@ -77,8 +77,7 @@ function copyTwitter() {
     window.open(tweetUrl, '_blank');
 };
 
-const copyButton = document.getElementById("link");
-  copyButton.addEventListener("click", () => {
+function copyLink() {
     const url = window.location.href;
     navigator.clipboard.writeText(url)
       .then(() => {
@@ -87,7 +86,8 @@ const copyButton = document.getElementById("link");
       .catch(() => {
         alert("Failed to copy URL to clipboard");
       });
-});
+};
+
 
 $(document).ready(function() {
     createAllContent();
@@ -95,4 +95,5 @@ $(document).ready(function() {
 
     $('#facebook').click(copyFacebook);
     $('#twitter').click(copyTwitter);
+    $('#link').click(copyLink);
 });

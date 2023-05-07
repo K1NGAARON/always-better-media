@@ -134,6 +134,10 @@
     background-color: var(--white);
 }
 
+.wrapper.cards .card.archive-card .btn {
+    margin-left: 20px;
+}
+
 .wrapper.cards .card-wrapper img {
     width: 20%;
     flex: 1 0 20%;

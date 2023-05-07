@@ -149,6 +149,7 @@
 
 .footer .socials a {
     font-size: 26px;
+    color: var(--white);
 }
 
 .footer .row.disclaimer {

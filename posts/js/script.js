@@ -1,8 +1,14 @@
+let displayedPosts = 9;
+
+function loadMorePosts(e) {
+
+};
+
 function createAllContent(e) {
     const target = document.querySelector('#allContent');
 
     if (target) {
-        const cards = content.map(content => {
+        const cards = content.slice(0, displayedPosts).map(content => {
             const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
@@ -19,8 +25,8 @@ function createAllContent(e) {
                             ${content.title}
                         </h5>
                         <a href="/posts/${content.link}" class="btn ghost no-border">
-                        Lees meer <i class="fa-solid fa-chevron-right"></i>
-                    </a>
+                            Lees meer <i class="fa-solid fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
             `;

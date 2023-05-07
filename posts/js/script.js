@@ -113,6 +113,8 @@ $(document).ready(function() {
     createAllContent();
     highlightedContent()
 
+    $('.filter-btn').click(filterContent);
+
     $('#facebook').click(copyFacebook);
     $('#twitter').click(copyTwitter);
     $('#link').click(copyLink);

@@ -1,7 +1,7 @@
 const content = [
     {
         title: "1. Apple Music Live returns for a brand-new season with Ed Sheeran",
-        tag: "health",
+        tag: "onze-mensen",
         category: "podcast",
         img: "/posts/img/image1.jpg",
         link: "dit-is-een-voorbeeld/",
@@ -9,7 +9,7 @@ const content = [
     },
     {
         title: "2. Apple reports second quarter results",
-        tag: "health",
+        tag: "brand-updates",
         category: "podcast",
         img: "/posts/img/image2.jpg",
         link: "",
@@ -17,7 +17,7 @@ const content = [
     },
     {
         title: "3. Apple launches 20 fun new games for its award-winning Apple Arcade service",
-        tag: "business",
+        tag: "brand-updates",
         category: "blog",
         img: "/posts/img/image3.jpg",
         link: "",
@@ -25,7 +25,7 @@ const content = [
     },
     {
         title: "4. Apple, Google partner on an industry specification to address unwanted tracking",
-        tag: "Health",
+        tag: "onze-mensen",
         category: "blog",
         img: "/posts/img/image4.jpg",
         link: "",
@@ -33,7 +33,7 @@ const content = [
     },
     {
         title: "5. Apple Saket will open this Thursday, April 20, in New Delhi",
-        tag: "science",
+        tag: "onze-mensen",
         category: "podcast",
         img: "/posts/img/image5.jpg",
         link: "",
@@ -41,7 +41,7 @@ const content = [
     },
     {
         title: "6. Apple Card's new high-yield Savings account is now available, offering a 4.15 percent APY",
-        tag: "science",
+        tag: "welzijn-verhogen",
         category: "blog",
         img: "/posts/img/image6.jpg",
         link: "",
@@ -49,7 +49,7 @@ const content = [
     },
     {
         title: "7. Apple Music Live returns for a brand-new season with Ed Sheeran",
-        tag: "health",
+        tag: "welzijn-verhogen",
         category: "podcast",
         img: "/posts/img/image1.jpg",
         link: "post-1/",
@@ -57,7 +57,7 @@ const content = [
     },
     {
         title: "8. Apple Saket will open this Thursday, April 20, in New Delhi",
-        tag: "science",
+        tag: "leiderschap",
         category: "podcast",
         img: "/posts/img/image5.jpg",
         link: "",
@@ -65,7 +65,7 @@ const content = [
     },
     {
         title: "9. Apple launches 20 fun new games for its award-winning Apple Arcade service",
-        tag: "business",
+        tag: "onze-mensen",
         category: "blog",
         img: "/posts/img/image3.jpg",
         link: "",
@@ -73,7 +73,7 @@ const content = [
     },
     {
         title: "10. Apple reports second quarter results",
-        tag: "health",
+        tag: "leiderschap",
         category: "podcast",
         img: "/posts/img/image2.jpg",
         link: "",
@@ -81,7 +81,7 @@ const content = [
     },
     {
         title: "11. Apple, Google partner on an industry specification to address unwanted tracking",
-        tag: "Health",
+        tag: "leiderschap",
         category: "blog",
         img: "/posts/img/image4.jpg",
         link: "",
@@ -89,7 +89,7 @@ const content = [
     },
     {
         title: "12. Apple Saket will open this Thursday, April 20, in New Delhi",
-        tag: "science",
+        tag: "welzijn-verhogen",
         category: "podcast",
         img: "/posts/img/image5.jpg",
         link: "",
@@ -110,6 +110,7 @@ function highlightedContent(e) {
 
     if (target) {
         const cards = content.slice(0, highlightedToShow).map(content => {
+            const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
                 <div class="card ${content.date} ${content.category} ${content.tag}">
@@ -119,7 +120,7 @@ function highlightedContent(e) {
                     </div>
                     <div class="card-content">
                         <p class="tag">
-                            ${content.tag}
+                            ${tagWithSpaces}
                         </p>
                         <h5>
                             ${content.title}
@@ -136,12 +137,12 @@ function highlightedContent(e) {
     }
 };
 
-
 function archiveContent(e) {
     const target = document.querySelector('#archive');
 
     if (target) {
         const cards = content.slice(highlightedToShow, highlightedToShow + archivedToShow).map(content => {
+            const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
                 <div class="card-wrapper">
@@ -149,7 +150,7 @@ function archiveContent(e) {
                     <div class="card archive-card ${content.date} ${content.category} ${content.tag}">
                         <div class="card-content">
                             <p class="tag">
-                                ${content.tag}
+                                ${tagWithSpaces}
                             </p>
                             <h5>
                                 ${content.title}

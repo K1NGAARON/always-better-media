@@ -3,6 +3,7 @@ function createAllContent(e) {
 
     if (target) {
         const cards = content.map(content => {
+            const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
                 <div class="card all-cards ${content.date} ${content.category} ${content.tag}">
@@ -12,7 +13,7 @@ function createAllContent(e) {
                     </div>
                     <div class="card-content">
                         <p class="tag">
-                            ${content.tag}
+                            ${tagWithSpaces}
                         </p>
                         <h5>
                             ${content.title}
@@ -34,6 +35,7 @@ function highlightedContent(e) {
     
     if (target) {
         const cards = content.slice(0, 4).map(content => {
+            const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
                 <div class="card related-card ${content.date} ${content.category} ${content.tag}">
@@ -43,7 +45,7 @@ function highlightedContent(e) {
                     </div>
                     <div class="card-content">
                         <p class="tag">
-                            ${content.tag}
+                            ${tagWithSpaces}
                         </p>
                         <h5>
                             ${content.title}
@@ -57,6 +59,24 @@ function highlightedContent(e) {
         }).join('');
     
         target.innerHTML = cards;
+    }
+};
+
+function filterContent(e) {
+    // Toggle Active Class on Filter
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.content .card').fadeOut();
+
+    // Selected Tag
+    let activeFilter = $(this).attr('id');
+    console.log(activeFilter);
+
+    if (activeFilter === 'all') {
+        $('.content .card').fadeIn();
+    } else {
+        $('.' + activeFilter).fadeIn();
     }
 };
 

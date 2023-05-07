@@ -60,8 +60,39 @@ function highlightedContent(e) {
     }
 };
 
+function copyFacebook() {
+    // Get the current URL
+    let currentUrl = window.location.href;
+    
+    // Copy the URL to the clipboard
+    navigator.clipboard.writeText(currentUrl);
+    
+    // Open Facebook in a new tab with the URL in the post field
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(currentUrl), '_blank');
+};
+
+function copyTwitter() {
+    let url = encodeURIComponent(window.location.href);
+    let tweetUrl = 'https://twitter.com/intent/tweet?url=' + url;
+    window.open(tweetUrl, '_blank');
+};
+
+const copyButton = document.getElementById("link");
+  copyButton.addEventListener("click", () => {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url)
+      .then(() => {
+        alert("URL copied to clipboard!");
+      })
+      .catch(() => {
+        alert("Failed to copy URL to clipboard");
+      });
+});
 
 $(document).ready(function() {
     createAllContent();
     highlightedContent()
+
+    $('#facebook').click(copyFacebook);
+    $('#twitter').click(copyTwitter);
 });

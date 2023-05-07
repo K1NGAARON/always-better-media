@@ -50,9 +50,31 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
+function filterContent(e) {
+    // Toggle Active Class on Filter
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.content .card').fadeOut();
+
+    // Selected Tag
+    let activeFilter = $(this).attr('id');
+    console.log(activeFilter);
+
+    if (activeFilter === 'all') {
+        $('.content .card').fadeIn();
+    } else {
+        $('.' + activeFilter).fadeIn();
+    }
+};
+
 
 $('.small-menu-content .nav').click(closeMenu);
 
 $("#menu-toggle").click(function() {
     $(".small-menu-wrapper").toggle("active");
+});
+
+$(document).ready(function() {
+    $('.filter-btn').click(filterContent);
 });

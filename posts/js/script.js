@@ -62,24 +62,6 @@ function highlightedContent(e) {
     }
 };
 
-function filterContent(e) {
-    // Toggle Active Class on Filter
-    $('.filter-btn').removeClass('active');
-    $(this).addClass('active');
-
-    $('.content .card').fadeOut();
-
-    // Selected Tag
-    let activeFilter = $(this).attr('id');
-    console.log(activeFilter);
-
-    if (activeFilter === 'all') {
-        $('.content .card').fadeIn();
-    } else {
-        $('.' + activeFilter).fadeIn();
-    }
-};
-
 function copyFacebook() {
     // Get the current URL
     let currentUrl = window.location.href;
@@ -112,8 +94,6 @@ function copyLink() {
 $(document).ready(function() {
     createAllContent();
     highlightedContent()
-
-    $('.filter-btn').click(filterContent);
 
     $('#facebook').click(copyFacebook);
     $('#twitter').click(copyTwitter);

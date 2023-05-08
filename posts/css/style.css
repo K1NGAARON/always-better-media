@@ -26,6 +26,10 @@
     flex: 1 0;
 }
 
+.btn.load-more {
+    margin-top: 40px;
+}
+
 .wrapper.cards.related-cards .card .card-content {
     bottom: 20px;
     left: 20px;

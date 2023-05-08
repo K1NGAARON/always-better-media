@@ -1,7 +1,39 @@
 let displayedPosts = 9;
 
 function loadMorePosts(e) {
+    e.preventDefault();
 
+    const target = document.querySelector('#allContent');
+    const remainingPosts = content.slice(displayedPosts);
+
+    if (remainingPosts.length > 0) {
+        const newCards = remainingPosts.slice(0, 9).map(content => {
+            const tagWithSpaces = content.tag.replace(/-/g, ' ');
+
+            return `
+                <div class="card all-cards ${content.date} ${content.category} ${content.tag}">
+                    <div class="card-image">
+                        <img src="${content.img}" alt="${content.title}">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">
+                            ${tagWithSpaces}
+                        </p>
+                        <h5>
+                            ${content.title}
+                        </h5>
+                        <a href="/posts/${content.link}" class="btn ghost no-border">
+                            Lees meer <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    
+        target.insertAdjacentHTML('beforeend', newCards);
+        displayedPosts += 9;
+    }
 };
 
 function createAllContent(e) {
@@ -100,6 +132,8 @@ function copyLink() {
 $(document).ready(function() {
     createAllContent();
     highlightedContent()
+
+    $('#loadMore').click(loadMorePosts);
 
     $('#facebook').click(copyFacebook);
     $('#twitter').click(copyTwitter);

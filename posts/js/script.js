@@ -38,6 +38,15 @@ function loadMorePosts(e) {
     }
 
     addLastCardClass();
+    showLoadMoreButton();
+};
+
+function showLoadMoreButton() {
+    if (content.length > displayedPosts) {
+        $('.load-more').show();
+    } else {
+        $('.load-more').hide();
+    }
 };
 
 function removeLastCardClass(e) {
@@ -149,6 +158,7 @@ function copyLink() {
 $(document).ready(function() {
     createAllContent();
     highlightedContent();
+    showLoadMoreButton();
 
     $('#loadMore').click(loadMorePosts);
 

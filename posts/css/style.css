@@ -1,12 +1,6 @@
-.wrapper.cards .card:nth-child(1),
-.wrapper.cards .card:nth-child(7n-1) {
-    flex: 1 0 40%;
-}
-
-.wrapper.cards .card.related-card:nth-child(1), 
-.wrapper.cards .card.related-card:nth-child(7n-1) {
-    flex-flow: column;
-    gap: 0;
+.wrapper.cards .card.last-card {
+    flex: 0 1 45%;
+    justify-self: flex-start;
 }
 
 .wrapper.cards .related-card .card-image {
@@ -24,6 +18,7 @@
 
 .wrapper.cards.related-cards .card {
     flex: 1 0;
+    height: unset;
 }
 
 .btn.load-more {

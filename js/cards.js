@@ -156,7 +156,7 @@ function archiveContent(e) {
                                 ${content.title}
                             </h5>
                         </div>
-                        <a href="/posts/${content.link}" class="btn ghost">
+                        <a href="/posts/${content.link}" class="btn ghost no-border">
                             Lees meer
                         </a>
                     </div>

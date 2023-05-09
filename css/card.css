@@ -1,11 +1,13 @@
 .wrapper.cards {
     width: 80%;
     flex-flow: row wrap;
-    gap: 40px;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .wrapper.cards .card {
-    flex: 1 0 40%;
+    flex: 1 0 45%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -55,8 +57,7 @@
     border-bottom-left-radius: var(--borderRadius);
 }
 
-.wrapper.cards .card .card-content h5,
-.wrapper.cards .card .card-content p {
+.wrapper.cards .card .card-content h5 {
     color: var(--black);
 }
 
@@ -83,30 +84,6 @@
     transition: var(--transition);
 }
 
-
-/* LARGE CARDS */
-.wrapper.cards .card:nth-child(1),
-.wrapper.cards .card:nth-child(7n-1) {
-    flex: 1 0 100%;
-    flex-flow: row wrap;
-    gap: 40px;
-    max-height: 50vh;
-}
-
-.wrapper.cards .card:nth-child(1) .card-image,
-.wrapper.cards .card:nth-child(7n-1) .card-image {
-    flex: 1 0 60%;
-    display: flex;
-    position: relative;
-    height: 30vh;
-}
-
-.wrapper.cards .card:nth-child(1) .card-content,
-.wrapper.cards .card:nth-child(7n-1) .card-content {
-    flex: 1 0 30%;
-    border-top-right-radius: var(--borderRadius);
-}
-
 /* ARCHIVE CARDS */
 .archive .wrapper.cards {
     width: 100%;
@@ -119,7 +96,6 @@
     overflow: unset;
 }
 
-
 .wrapper.cards .card-wrapper {
     flex: 0 1 40%;
 
@@ -127,7 +103,6 @@
     flex-flow: row wrap;
     gap: 40px;
 }
-
 
 .wrapper.cards .card.archive-card {
     flex: 0 1 50%;
@@ -146,7 +121,6 @@
     border-radius: var(--borderRadius);
     object-fit: cover;
 }
-
 
 .wrapper.cards .card.archive-card .card-content {
     position: unset;
@@ -168,23 +142,4 @@
 .wrapper.cards .card.archive-card .card-content .btn {
     font-size: 14px;
     margin-top: auto;
-}
-
-/* LARGE CARDS ON ARCHIVE */
-.wrapper.cards .card.all-cards:nth-child(1),
-.wrapper.cards .card.all-cards:nth-child(7n-1) {
-    flex: 1 0 40%;
-    flex-flow: column;
-    gap: unset;
-    max-height: unset;
-}
-
-.wrapper.cards .card.all-cards:nth-child(1) .card-image,
-.wrapper.cards .card.all-cards:nth-child(7n-1) .card-image {
-    flex: unset;
-}
-
-.wrapper.cards .card.all-cards:nth-child(1) .card-content,
-.wrapper.cards .card.all-cards:nth-child(7n-1) .card-content {
-    flex: unset;
 }

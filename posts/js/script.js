@@ -3,6 +3,8 @@ let displayedPosts = 9;
 function loadMorePosts(e) {
     e.preventDefault();
 
+    removeLastCardClass();
+
     const target = document.querySelector('#allContent');
     const remainingPosts = content.slice(displayedPosts);
 
@@ -34,7 +36,19 @@ function loadMorePosts(e) {
         target.insertAdjacentHTML('beforeend', newCards);
         displayedPosts += 9;
     }
+
+    addLastCardClass();
 };
+
+function removeLastCardClass(e) {
+    $('.wrapper.cards').find('.card').removeClass('last-card');
+}
+
+function addLastCardClass(e) {
+    if (displayedPosts % 4) {
+        $('.wrapper.cards').find('.card').last().addClass('last-card');
+    }
+}
 
 function createAllContent(e) {
     const target = document.querySelector('#allContent');
@@ -66,6 +80,8 @@ function createAllContent(e) {
     
         target.innerHTML = cards;
     }
+
+    addLastCardClass();
 };
 
 function highlightedContent(e) {
@@ -131,7 +147,7 @@ function copyLink() {
 
 $(document).ready(function() {
     createAllContent();
-    highlightedContent()
+    highlightedContent();
 
     $('#loadMore').click(loadMorePosts);
 

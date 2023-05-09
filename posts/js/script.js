@@ -55,6 +55,7 @@ function removeLastCardClass(e) {
 
 function addLastCardClass(e) {
     if (displayedPosts % 2 === 0) {
+        
     } else {
         $('.card').last().addClass('last-card');
     }

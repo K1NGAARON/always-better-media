@@ -41,14 +41,15 @@ function loadMorePosts(e) {
 };
 
 function removeLastCardClass(e) {
-    $('.wrapper.cards').find('.card').removeClass('last-card');
-}
+    $('.card').removeClass('last-card');
+};
 
 function addLastCardClass(e) {
-    if (displayedPosts % 4) {
-        $('.wrapper.cards').find('.card').last().addClass('last-card');
+    if (displayedPosts % 2 === 0) {
+    } else {
+        $('.card').last().addClass('last-card');
     }
-}
+};
 
 function createAllContent(e) {
     const target = document.querySelector('#allContent');

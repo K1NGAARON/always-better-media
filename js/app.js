@@ -11,18 +11,18 @@ $(document).scroll(function () {
     if (darkHeader) {
         if ($(this).scrollTop() > header.height()) {
             header.addClass('active');
-            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+            headerLogo.attr('src', "/assets/logo/logo-black.png")
         } else {
             header.removeClass('active');
-            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+            headerLogo.attr('src', "/assets/logo/logo-black.png")
         }
     } else {
         if ($(this).scrollTop() > header.height()) {
             header.addClass('active');
-            headerLogo.attr('src', "/assets/logo/always-better-black.png")
+            headerLogo.attr('src', "/assets/logo/logo-black.png")
         } else {
             header.removeClass('active');
-            headerLogo.attr('src', "/assets/logo/always-better-white.png")
+            headerLogo.attr('src', "/assets/logo/logo-white.png")
         }
     }
 });

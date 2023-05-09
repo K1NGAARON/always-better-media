@@ -138,3 +138,26 @@
 .content .mt-60 {
     margin-top: 60px;
 }
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
+}
+
+.cta h5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cta p {
+    text-align: center;
+    font-size: 16px;
+}
